@@ -43,3 +43,8 @@ div.container {
 #current-temperature {
   text-align: left;
 }
+.footnote {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 40px;
+}
