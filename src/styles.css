@@ -1,0 +1,45 @@
+div.container {
+  margin-left: 40px;
+  margin-top: 40px;
+  padding: 20px 0 60px 60px;
+  border: 1px solid grey;
+  max-width: 1000px;
+  font-family: Poppins;
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  color: white;
+  border-radius: 20px;
+}
+.cities {
+  max-width: 500px;
+  text-decoration: underline;
+  text-align: center;
+}
+.col-sm-3 {
+  padding: 40px 10px;
+}
+.today {
+  padding: 20px 0 20px 20px;
+  max-width: 700px;
+  border: 1px solid grey;
+  border-radius: 30px;
+}
+.forecast {
+  padding: 30px 0 0 0;
+  max-width: 700px;
+  text-align: center;
+}
+.highest {
+  font-weight: 700;
+}
+.temperature {
+  font-size: 36px;
+}
+.units {
+  font-size: 36px;
+}
+#farenheit-link {
+  color: aqua;
+}
+#current-temperature {
+  text-align: left;
+}
