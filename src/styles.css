@@ -6,7 +6,13 @@ div.container {
   border: 1px solid grey;
   max-width: 1000px;
   font-family: Poppins;
-  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background: linear-gradient(
+    60deg,
+    #3d3393 0%,
+    #2b76b9 10%,
+    #2cacd1 65%,
+    #35eb93 100%
+  );
   color: white;
   border-radius: 20px;
 }
@@ -38,9 +44,7 @@ div.container {
 .units {
   font-size: 36px;
 }
-#farenheit-link {
-  color: aqua;
-}
+
 #current-temperature {
   text-align: left;
 }
@@ -54,6 +58,7 @@ div.container {
   position: relative;
   font-size: 16px;
   top: -14px;
+  font-weight: 500;
 }
 img {
   max-height: 48px;
@@ -64,4 +69,5 @@ img {
 .today .active {
   color: white;
   text-decoration: none;
+  cursor: none;
 }

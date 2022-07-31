@@ -82,12 +82,17 @@ function handleSubmit(event) {
 function convertToFarenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+
   let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 
 function convertToCelcius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
@@ -96,8 +101,8 @@ let celciusTemperature = null;
 let searchForm = document.querySelector("#search-line");
 searchForm.addEventListener("submit", handleSubmit);
 
-let farenhetLink = document.querySelector("#farenheit-link");
-farenhetLink.addEventListener("click", convertToFarenheit);
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", convertToFarenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelcius);
