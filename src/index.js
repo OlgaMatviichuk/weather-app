@@ -48,9 +48,11 @@ currentTime.innerHTML = showTime();
 
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  celciusTemperature = response.data.main.temp;
+
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celciusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -77,7 +79,19 @@ function handleSubmit(event) {
   apiSearch(cityElement.value);
 }
 
-apiSearch("New York");
+function convertToFarenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
+}
+
+let celciusTemperature = null;
 
 let searchForm = document.querySelector("#search-line");
 searchForm.addEventListener("submit", handleSubmit);
+
+let farenhetLink = document.querySelector("#farenheit-link");
+farenhetLink.addEventListener("click", convertToFarenheit);
+
+apiSearch("New York");
