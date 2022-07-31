@@ -55,3 +55,8 @@ div.container {
   font-size: 16px;
   top: -14px;
 }
+img {
+  max-height: 48px;
+  position: relative;
+  top: -8px;
+}
