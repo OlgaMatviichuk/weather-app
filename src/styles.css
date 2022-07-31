@@ -60,3 +60,8 @@ img {
   position: relative;
   top: -8px;
 }
+
+.today .active {
+  color: white;
+  text-decoration: none;
+}

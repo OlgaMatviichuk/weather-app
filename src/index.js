@@ -86,6 +86,11 @@ function convertToFarenheit(event) {
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 
+function convertToCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
 let celciusTemperature = null;
 
 let searchForm = document.querySelector("#search-line");
@@ -93,5 +98,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let farenhetLink = document.querySelector("#farenheit-link");
 farenhetLink.addEventListener("click", convertToFarenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelcius);
 
 apiSearch("New York");
