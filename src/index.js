@@ -64,12 +64,20 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
 }
-function apiSearch(event) {
-  event.preventDefault();
+
+function apiSearch(city) {
   let apiKey = "7095abf8ac84e0b68c9e58e564131570";
-  let city = document.querySelector("#specificSizeInputCity").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#specificSizeInputCity");
+  apiSearch(cityElement.value);
+}
+
+apiSearch("New York");
+
 let searchForm = document.querySelector("#search-line");
-searchForm.addEventListener("submit", apiSearch);
+searchForm.addEventListener("submit", handleSubmit);
