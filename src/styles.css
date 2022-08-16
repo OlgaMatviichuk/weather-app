@@ -35,9 +35,7 @@ div.container {
   max-width: 700px;
   text-align: center;
 }
-.weather-forecast-temperature-max {
-  font-weight: bolder;
-}
+
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
